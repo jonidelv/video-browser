@@ -14,7 +14,7 @@ class AppContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.videoSearch('ferro carril oeste')
+    this.videoSearch('binagora')
   }
 
   videoSearch = (term) => {
@@ -35,9 +35,10 @@ class AppContainer extends React.Component {
 
 
   render() {
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 400)
     return (
       <div>
-        <SearchBar onSearchTermChange={this.videoSearch} />
+        <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={this.changeSelectedVideo}
@@ -49,5 +50,3 @@ class AppContainer extends React.Component {
 }
 
 export default AppContainer
-
-// const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 400)
