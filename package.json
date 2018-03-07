@@ -18,5 +18,5 @@
     "eject": "react-scripts eject",
     "deploy": "./scripts/deploy.sh"
   },
-  "homepage": "https://delvallejonatan.github.io/video-browser"
+  "homepage": "https://jonidelv.github.io/video-browser"
 }
