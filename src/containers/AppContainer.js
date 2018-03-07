@@ -4,7 +4,7 @@ import VideoList from '../components/VideoList'
 import VideoDetail from '../components/VideoDetail'
 import YTSearch from 'youtube-api-search'
 import _ from 'lodash'
-const API_KEY = 'AIzaSyAuQCVeNfKhtRk9KlChQPT1nO27DPO_5Ss'
+const API_KEY = 'your api key'
 
 class AppContainer extends React.Component {
 
@@ -14,7 +14,7 @@ class AppContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.videoSearch('binagora')
+    this.videoSearch('React JS')
   }
 
   videoSearch = (term) => {
